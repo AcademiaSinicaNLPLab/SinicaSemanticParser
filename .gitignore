@@ -1,4 +1,5 @@
 apache-opennlp-*
 stanford-parser-full-*
-temp/*
-output/*
+temp
+output
+*.pyc
