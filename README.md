@@ -2,11 +2,18 @@ QUICK START
 ===========
 Run the follow commands to quickly setup and lunch
 ```
-> git clone git@github.com:AcademiaSinicaNLPLab/SinicaSemanticParser.git
-> cd SinicaSemanticParser
-> ./setup.sh
-> cd system
-> ./server.sh
+## setup
+git clone git@github.com:AcademiaSinicaNLPLab/SinicaSemanticParser.git
+cd SinicaSemanticParser
+./setup.sh
+
+## lunch the server
+cd system
+./server.sh
+
+## process input.txt in SinicaSemanticParser/input/
+## and emit xml format data in SinicaSemanticParser/output/
+./process.sh
 ```
 
 INTRODUCTION
