@@ -1,4 +1,4 @@
-﻿INTRODUCTION
+INTRODUCTION
 ============
 System for SenticNet Semantic analysis Challenge Task#2. The system is supposed to take input in the form of a text
 file and produce "concepts" extracted from each of the sentence in the required format mentioned at the challenge website ([http://sentic.net/challenge/](http://sentic.net/challenge/)).
@@ -46,10 +46,20 @@ This directory 'SinicaSemanticParser' contains the following directries:
 	
 INSTRUCTIONS TO RUN THE SYSTEM
 ==============================
-1. Please download Stanford Parser version 3.3.1 from [this link](http://nlp.stanford.edu/software/lex-parser.shtml#Download), 
-extract it and put the resulting `stanford-parser-full-2014-01-04` directory in the `SinicaSemanticParser` directory.
 
-2. Please download `apache-opennlp-1.5.3-bin.zip` from [here](https://opennlp.apache.org/cgi-bin/download.cgi), extract it and put the resulting `apache-opennlp-1.5.3` directory in the `SinicaSemanticParser` directory.
+A fast way to setup this system for Linux/Mac users:
+
+just run: `./setup.sh`
+
+and jump to `step 4` below to lunch the server! 
+
+---
+
+If you run on windows or prefer to manually insatll everything:
+
+1. Please download Stanford Parser version 3.3.1 from [this link](http://nlp.stanford.edu/software/stanford-parser-full-2014-01-04.zip), extract it and put the resulting `stanford-parser-full-2014-01-04` directory in the `SinicaSemanticParser` directory.
+
+2. Please download `apache-opennlp-1.5.3-bin.zip` from [here](http://apache.stu.edu.tw//opennlp/opennlp-1.5.3/apache-opennlp-1.5.3-bin.zip), extract it and put the resulting `apache-opennlp-1.5.3` directory in the `SinicaSemanticParser` directory.
 
 	Note: Make sure after unzipping you get the directries named `stanford-parser-full-2014-01-04` and `apache-opennlp-1.5.3`. We have observed depening on how to unzip it, you might get `stanford-parser-full-2014-01-04/stanford-parser-full-2014-01-04` and `apache-opennlp-1.5.3-bin/apache-opennlp-1.5.3`. 
 
@@ -57,31 +67,30 @@ extract it and put the resulting `stanford-parser-full-2014-01-04` directory in 
 
 3. From the command prompt go into the 'SinicaSemanticParser/system' directory and compile java programs with the following command:
 
-	1. for __windows__
-
-		```
-javac -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar *.java
-		```
-
-	2. for __Linux__, __Mac__
+	- for __windows__
 	
 		```
-javac -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar *.java
+	javac -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar *.java
+	```
+	- for __Linux__, __Mac__
+	
 		```
+	javac -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar *.java
+	```
 
 4. Now run the `ConceptExtractorServer` with the following command:
 
-	1. for __windows__
+	- for __windows__
 	
 		```
 	java -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar ConceptExtractorServer
-		```
+	```
 	
-	2. for __Linux__, __Mac__
+	- for __Linux__, __Mac__
 	
 		```
 	java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorServer
-		```
+	```
 
 	You should see the following message:
 
@@ -108,16 +117,8 @@ python featureExtractorServer.py
 
 7. Open another command line terminal, go into the `SinicaSemanticParser/system` directory and run the `ConceptExtractorBatchClient` by issuing the following command:
 
-	1. for __windows__
-	
 	```
-java -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
-	```
-
-	2. for __Linux__, __Mac__
-	
-	```
-java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
+	java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
 	```
 
 	If everything goes well, you should see the following message:
