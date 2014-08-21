@@ -49,9 +49,7 @@ INSTRUCTIONS TO RUN THE SYSTEM
 
 A fast way to setup this system for Linux/Mac users:
 
-just run: `./setup.sh`
-
-and jump to `step 4` below to lunch the server! 
+- run: `./setup.sh` and jump to `step 4` below to lunch the server! 
 
 ---
 
@@ -67,12 +65,12 @@ If you run on windows or prefer to manually insatll everything:
 
 3. From the command prompt go into the 'SinicaSemanticParser/system' directory and compile java programs with the following command:
 
-	- for __windows__
+	1. for __windows__
 	
 		```
 	javac -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar *.java
 	```
-	- for __Linux__, __Mac__
+	2. for __Linux__, __Mac__
 	
 		```
 	javac -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar *.java
@@ -80,13 +78,13 @@ If you run on windows or prefer to manually insatll everything:
 
 4. Now run the `ConceptExtractorServer` with the following command:
 
-	- for __windows__
+	1. for __windows__
 	
 		```
 	java -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar ConceptExtractorServer
 	```
 	
-	- for __Linux__, __Mac__
+	2. for __Linux__, __Mac__
 	
 		```
 	java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorServer
