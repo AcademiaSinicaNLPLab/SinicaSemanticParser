@@ -66,7 +66,7 @@ javac -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-p
 	2. for __Linux__, __Mac__
 	
 		```
-javac -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar *.java
+javac -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar *.java
 		```
 
 4. Now run the `ConceptExtractorServer` with the following command:
@@ -108,8 +108,16 @@ python featureExtractorServer.py
 
 7. Open another command line terminal, go into the `SinicaSemanticParser/system` directory and run the `ConceptExtractorBatchClient` by issuing the following command:
 
+	1. for __windows__
+	
 	```
-	java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
+java -cp .;..\stanford-parser-full-2014-01-04\stanford-parser.jar;..\stanford-parser-full-2014-01-04\stanford-parser-3.3.1-models.jar;..\classifier\maxent\lib\trove-3.0.3.jar;..\apache-opennlp-1.5.3\lib\opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
+	```
+
+	2. for __Linux__, __Mac__
+	
+	```
+java -cp .:../stanford-parser-full-2014-01-04/stanford-parser.jar:../stanford-parser-full-2014-01-04/stanford-parser-3.3.1-models.jar:../classifier/maxent/lib/trove-3.0.3.jar:../apache-opennlp-1.5.3/lib/opennlp-maxent-3.0.3.jar ConceptExtractorBatchClient
 	```
 
 	If everything goes well, you should see the following message:
