@@ -1,3 +1,14 @@
+QUICK START
+===========
+Run the follow commands to quickly setup and lunch
+```
+> git clone git@github.com:AcademiaSinicaNLPLab/SinicaSemanticParser.git
+> cd SinicaSemanticParser
+> ./setup.sh
+> cd system
+> ./server.sh
+```
+
 INTRODUCTION
 ============
 System for SenticNet Semantic analysis Challenge Task#2. The system is supposed to take input in the form of a text
