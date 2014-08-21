@@ -1,0 +1,4 @@
+apache-opennlp-*
+stanford-parser-full-*
+temp/*
+output/*
