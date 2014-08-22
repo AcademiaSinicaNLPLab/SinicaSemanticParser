@@ -3,3 +3,4 @@ stanford-parser-full-*
 temp
 output
 *.pyc
+*.class
