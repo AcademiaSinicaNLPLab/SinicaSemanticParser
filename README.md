@@ -2,32 +2,29 @@ QUICK START
 ===========
 Run the follow commands to quickly setup and lunch
 
-- to setup
-	
-	```
-// build the system
+1. setup
+
+	```shell
 git clone git@github.com:AcademiaSinicaNLPLab/SinicaSemanticParser.git
 cd SinicaSemanticParser
+./setup.sh
+```
 
-./setup.sh	
-// lunch the java server
+2. run servers
+
+	```shell
 cd system
 ./java_server.sh
-
-// open a new terminal, lunch the python server
-cd system
-./python_server.sh
-	```
+./python_server.sh 	## need another terminal
+```
 	
-- test if it works
+3. test if it works
 
-	```
-// process SinicaSemanticParser/input/input.txt
-// and emit xml format data in SinicaSemanticParser/output/output.txt
+	```shell
 ./batch_run.sh
 	```
 	
-- for Pythoners
+4. for Pythoners
 
 	```python
 from SinicaConcept.py import SinicaConcept
